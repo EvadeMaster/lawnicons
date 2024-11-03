@@ -27,6 +27,7 @@ ICONS_CALCULATION_TYPE = os.getenv("ICONS_CALCULATION") or "default"
 # [-1]: Nightly
 # [-2]: v2.12.0 - last release
 # [-3]: v2.11.0 - second last release
+print(git.Repo(REPOSITORY).tags, key=lambda t: t.commit.committed_datetime)
 last_tag = sorted(
     git.Repo(REPOSITORY).tags, 
     key=lambda t: t.commit.committed_datetime
