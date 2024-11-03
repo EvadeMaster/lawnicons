@@ -49,6 +49,7 @@ jobs:
         env:
           INCREMENT: ${{ github.event.inputs.increment || 'default' }}
         run: |
+          ls
           python .github/release_helper.py
         shell: bash
   build-release-apk:
